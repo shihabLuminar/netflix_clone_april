@@ -84,7 +84,7 @@ class _UserNameScreenState extends State<UserNameScreen> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Image.asset(
-                      ImageConstants.add_PNG,
+                      ImageConstants.ADD_PNG,
                     ),
                     SizedBox(
                       height: 20,
