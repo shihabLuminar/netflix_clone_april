@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:netflix_clone_april/dummy_db.dart';
 import 'package:netflix_clone_april/utils/constants/color_constants.dart';
 import 'package:netflix_clone_april/utils/constants/image_constants.dart';
+import 'package:netflix_clone_april/view/home_screen/widgets/movies_card_builder_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -9,13 +11,32 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ColorConstants.mainBlack,
-      body: Column(
-        children: [
-          _buildMoviePosterSection(),
-          SizedBox(height: 11),
-          _buildPlaySection(),
-          SizedBox(height: 40),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            _buildMoviePosterSection(),
+            SizedBox(height: 11),
+            _buildPlaySection(),
+            SizedBox(height: 40),
+            MoviesCardBuilderWidget(
+              customWidth: 102,
+              isCircle: true,
+              posterImages: DummyDb.moviePostersListd1,
+            ),
+            MoviesCardBuilderWidget(
+              posterImages: DummyDb.moviePostersListd2,
+            ),
+            MoviesCardBuilderWidget(
+              posterImages: DummyDb.moviePostersListd1,
+            ),
+            MoviesCardBuilderWidget(
+              posterImages: DummyDb.moviePostersListd2,
+              customHeight: 251,
+              customWidth: 154,
+            ),
+          ],
+        ),
       ),
     );
   }
