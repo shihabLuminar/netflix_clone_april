@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:netflix_clone_april/dummy_db.dart';
 import 'package:netflix_clone_april/utils/constants/color_constants.dart';
 import 'package:netflix_clone_april/utils/constants/image_constants.dart';
+import 'package:netflix_clone_april/view/bottom_nav_screen/bottom_nav_screen.dart';
 import 'package:netflix_clone_april/view/home_screen/home_screen.dart';
 
 class UserNameScreen extends StatefulWidget {
@@ -47,7 +48,7 @@ class _UserNameScreenState extends State<UserNameScreen> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => HomeScreen(),
+                        builder: (context) => BottomNavScreen(),
                       ));
                 },
                 child: Column(

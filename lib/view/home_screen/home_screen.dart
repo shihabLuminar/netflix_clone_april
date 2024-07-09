@@ -25,6 +25,7 @@ class HomeScreen extends StatelessWidget {
               posterImages: DummyDb.moviePostersListd1,
             ),
             MoviesCardBuilderWidget(
+              haveInfoCard: true,
               posterImages: DummyDb.moviePostersListd2,
             ),
             MoviesCardBuilderWidget(
@@ -34,6 +35,15 @@ class HomeScreen extends StatelessWidget {
               posterImages: DummyDb.moviePostersListd2,
               customHeight: 251,
               customWidth: 154,
+            ),
+            MoviesCardBuilderWidget(
+              posterImages: DummyDb.moviePostersListd1,
+            ),
+            MoviesCardBuilderWidget(
+              posterImages: DummyDb.moviePostersListd1,
+            ),
+            MoviesCardBuilderWidget(
+              posterImages: DummyDb.moviePostersListd1,
             ),
           ],
         ),

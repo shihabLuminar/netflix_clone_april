@@ -8,11 +8,13 @@ class MoviesCardBuilderWidget extends StatelessWidget {
     this.customHeight = 161,
     this.customWidth = 103,
     required this.posterImages,
+    this.haveInfoCard = false,
   });
   final bool isCircle; //  true for making items circular
   final double customHeight;
   final double customWidth;
   final List<String> posterImages;
+  final bool haveInfoCard;
 
   @override
   Widget build(BuildContext context) {
@@ -45,6 +47,35 @@ class MoviesCardBuilderWidget extends StatelessWidget {
                   shape: isCircle ? BoxShape.circle : BoxShape.rectangle),
               height: customHeight,
               width: customWidth,
+              child: Visibility(
+                visible: haveInfoCard,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Container(
+                      height: 3,
+                      color: Colors.grey,
+                    ),
+                    Container(
+                      padding: EdgeInsets.symmetric(vertical: 7),
+                      color: ColorConstants.mainBlack,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Icon(
+                            Icons.info_outline,
+                            color: Colors.white,
+                          ),
+                          Icon(
+                            Icons.more_vert,
+                            color: Colors.white,
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              ),
             ),
             separatorBuilder: (context, index) => SizedBox(
               width: 7,
