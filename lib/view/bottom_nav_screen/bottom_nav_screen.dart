@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:netflix_clone_april/utils/constants/color_constants.dart';
+import 'package:netflix_clone_april/view/comming_soon_screen/comming_soon_sreen.dart';
 import 'package:netflix_clone_april/view/home_screen/home_screen.dart';
 import 'package:netflix_clone_april/view/search_screen/search_screen.dart';
 
@@ -15,7 +16,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
   List<Widget> myScreens = [
     HomeScreen(),
     SearchScreen(),
-    Container(color: Colors.red),
+    CommingSoonSreen(),
     Container(color: Colors.blue),
     Container(color: Colors.grey),
   ];

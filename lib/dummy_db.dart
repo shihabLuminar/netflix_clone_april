@@ -38,4 +38,10 @@ class DummyDb {
     "https://i.pinimg.com/474x/07/d2/d1/07d2d16a867f19de142ac54cf74dfb5a.jpg",
     "https://i.pinimg.com/474x/f9/f4/0e/f9f40eda4f4571a5a4d4a7e0db5701cf.jpg",
   ];
+
+  static const List<String> newArrivals = [
+    "https://i.pinimg.com/474x/5c/96/2d/5c962d5dc8dfaab1561878813c19445e.jpg",
+    "https://i.pinimg.com/474x/10/17/d6/1017d65e8ce5f87675b63e8667053e98.jpg",
+    "https://i.pinimg.com/474x/bc/fe/47/bcfe47b4b2fbcb1dd40cef44569d6d81.jpg",
+  ];
 }
