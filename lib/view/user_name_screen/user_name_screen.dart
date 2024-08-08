@@ -3,6 +3,7 @@ import 'package:netflix_clone_april/dummy_db.dart';
 import 'package:netflix_clone_april/utils/constants/color_constants.dart';
 import 'package:netflix_clone_april/utils/constants/image_constants.dart';
 import 'package:netflix_clone_april/view/bottom_nav_screen/bottom_nav_screen.dart';
+import 'package:netflix_clone_april/view/global_widgets/user_name_card.dart';
 import 'package:netflix_clone_april/view/home_screen/home_screen.dart';
 
 class UserNameScreen extends StatefulWidget {
@@ -43,32 +44,16 @@ class _UserNameScreenState extends State<UserNameScreen> {
               crossAxisCount: 2, crossAxisSpacing: 10, mainAxisExtent: 130),
           itemBuilder: (context, index) {
             if (index < DummyDb.usersList.length) {
-              return InkWell(
-                onTap: () {
+              return UserNameCard(
+                imagePath: DummyDb.usersList[index]["imagePath"].toString(),
+                userName: DummyDb.usersList[index]["name"].toString(),
+                onCardPressed: () {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) => BottomNavScreen(),
                       ));
                 },
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Image.asset(
-                      DummyDb.usersList[index]["imagePath"].toString(),
-                    ),
-                    SizedBox(
-                      height: 4,
-                    ),
-                    Text(
-                      DummyDb.usersList[index]["name"].toString(),
-                      style: TextStyle(
-                        color: ColorConstants.mainWhite,
-                        fontSize: 13.25,
-                      ),
-                    )
-                  ],
-                ),
               );
             } else {
               return InkWell(

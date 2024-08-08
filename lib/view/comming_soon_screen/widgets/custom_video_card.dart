@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:netflix_clone_april/dummy_db.dart';
 import 'package:netflix_clone_april/utils/constants/color_constants.dart';
 
 class CustomVideoCard extends StatelessWidget {
